@@ -133,6 +133,7 @@
             <a href="{{ route('penerbit.index') }}" class="nav-link {{ request()->routeIs('penerbit.*') ? 'active' : '' }}">Penerbit</a>
             <a href="{{ route('fasilitas.index') }}" class="nav-link {{ request()->routeIs('fasilitas.*') ? 'active' : '' }}">Fasilitas</a>
             <a href="{{ route('area.index') }}" class="nav-link {{ request()->routeIs('area.*') ? 'active' : '' }}">Area &amp; Meja</a>
+            <a href="{{ route('buku.index') }}" class="nav-link {{ request()->routeIs('buku.*') ? 'active' : '' }}">Buku</a>
           </nav>
         @endauth
       </div>

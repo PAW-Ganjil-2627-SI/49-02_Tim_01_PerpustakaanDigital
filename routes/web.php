@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\BukuController;
 use App\Http\Controllers\FasilitasController;
 use App\Http\Controllers\MejaController;
 use App\Http\Controllers\PenerbitController;
@@ -21,6 +22,7 @@ Route::middleware('auth')->group(function () {
     Route::get('/penerbit', [PenerbitController::class, 'index'])->name('penerbit.index');
     Route::get('/fasilitas', [FasilitasController::class, 'index'])->name('fasilitas.index');
     Route::get('/area', [MejaController::class, 'index'])->name('area.index');
+    Route::get('/buku', [BukuController::class, 'index'])->name('buku.index');
 
     Route::middleware('role:admin')->group(function () {
         Route::resource('penerbit', PenerbitController::class)->except(['index', 'show']);
@@ -30,6 +32,7 @@ Route::middleware('auth')->group(function () {
         Route::resource('area', MejaController::class)
             ->parameters(['area' => 'meja'])
             ->except(['index', 'show']);
+        Route::resource('buku', BukuController::class)->except(['index', 'show']);
     });
 
     Route::get('/penerbit/{penerbit}', [PenerbitController::class, 'show'])

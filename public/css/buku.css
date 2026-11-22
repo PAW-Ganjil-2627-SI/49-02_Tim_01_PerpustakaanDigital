@@ -1,0 +1,92 @@
+/* Scoped styles for Buku module (compatible with gaya.css & layouts/app) */
+.buku-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 14px;
+  margin: 0 0 18px;
+}
+
+.buku-stat-card {
+  border-radius: 10px;
+  padding: 14px 18px;
+  text-align: center;
+  border: 1px solid var(--border-soft, #dce5f0);
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.04);
+}
+
+.buku-stat-pink { background-color: #f8d7da; color: #58151c; }
+.buku-stat-green { background-color: #d1e7dd; color: #0a3622; }
+.buku-stat-cyan { background-color: #cff4fc; color: #055160; }
+.buku-stat-amber { background-color: #fff3cd; color: #664d03; }
+
+.buku-stat-label {
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+}
+
+.buku-stat-value {
+  font-size: 26px;
+  font-weight: 700;
+  margin-top: 4px;
+}
+
+.buku-pesan {
+  padding: 11px 16px;
+  border-radius: 6px;
+  margin: 12px 0 18px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.buku-pesan.sukses {
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #badbcc;
+}
+
+.buku-pesan.gagal {
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c2c7;
+}
+
+.buku-form-box input[type=number] {
+  width: 100%;
+  padding: 10px 12px;
+  margin: 6px 0 12px;
+  display: inline-block;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  background-color: #ffffff;
+  color: var(--text-dark, #1e293b);
+  font-family: inherit;
+  font-size: 14px;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.buku-form-box input[type=number]:focus {
+  outline: none;
+  border-color: var(--sky-blue, #0284c7);
+  box-shadow: 0 0 0 3px rgba(2, 132, 199, 0.15);
+}
+
+.buku-form-box button[type=submit] {
+  background-color: var(--sky-blue, #0284c7);
+  color: #ffffff;
+  padding: 10px 20px;
+  margin: 4px 0;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  font-family: inherit;
+  transition: background-color 0.2s ease;
+}
+
+.buku-form-box button[type=submit]:hover {
+  background-color: var(--sky-blue-dark, #0369a1);
+}
+
