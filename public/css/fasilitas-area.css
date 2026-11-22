@@ -1,0 +1,154 @@
+/* Scoped styles for Fasilitas & Area modules (harmonized with gaya.css) */
+.kotak {
+  border-radius: 10px;
+  box-shadow: 0 4px 14px rgba(15, 23, 42, 0.06);
+}
+
+.area {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.area .card {
+  background-color: var(--surface-white, #ffffff);
+  border: 1px solid var(--border-soft, #dce5f0);
+  padding: 15px;
+  width: 220px;
+}
+
+.area .card img,
+.area .card .noimg {
+  width: 100%;
+  height: 130px;
+  object-fit: cover;
+  display: block;
+}
+
+.noimg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #e2e8f0;
+  color: #64748b;
+  font-size: 13px;
+}
+
+.tersedia {
+  color: #15803d;
+  font-weight: 600;
+}
+
+.tidak {
+  color: #dc2626;
+  font-weight: 600;
+}
+
+.btn {
+  display: inline-block;
+  padding: 9px 16px;
+  background-color: var(--sky-blue, #0284c7);
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  transition: background-color 0.2s ease;
+}
+
+.btn:hover {
+  background-color: var(--sky-blue-dark, #0369a1);
+}
+
+.btn-kecil {
+  padding: 6px 12px;
+  font-size: 13px;
+  background-color: var(--amber, #d97706);
+}
+
+.btn-kecil:hover {
+  background-color: var(--amber-dark, #b45309);
+}
+
+.aksi {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.aksi-tengah {
+  justify-content: center;
+}
+
+.aksi form {
+  margin: 0;
+}
+
+.btn-hapus {
+  padding: 6px 12px;
+  background-color: var(--amber-red, #dc2626);
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.form {
+  background-color: var(--surface-white, #ffffff);
+  border: 1px solid var(--border-soft, #dce5f0);
+  padding: 24px;
+  max-width: 480px;
+}
+
+.form label {
+  display: block;
+  margin: 12px 0 4px;
+  font-weight: 600;
+}
+
+.preview {
+  width: 200px;
+  height: 130px;
+  object-fit: cover;
+  display: block;
+  margin: 8px 0;
+}
+
+.aksi-form {
+  margin-top: 20px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.alert {
+  padding: 11px 16px;
+  margin-bottom: 16px;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.alert-ok {
+  background-color: #e0f2fe;
+  color: #075985;
+  border: 1px solid #bae6fd;
+}
+
+.page-container button:not(.btn-logout):not(.btn-hapus) {
+  background-color: var(--sky-blue, #0284c7);
+  color: #ffffff;
+  border: none;
+  padding: 9px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  font-family: inherit;
+  transition: background-color 0.2s ease;
+}
+
+.page-container button:not(.btn-logout):not(.btn-hapus):hover {
+  background-color: var(--sky-blue-dark, #0369a1);
+}

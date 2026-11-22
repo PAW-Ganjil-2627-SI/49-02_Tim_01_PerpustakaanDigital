@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>@yield('title', 'Data Penerbit dan Supplier')</title>
+  <title>@yield('title', 'Perpustakaan Digital')</title>
   <link rel="stylesheet" href="{{ asset('css/gaya.css') }}">
   <style>
     .topbar {
@@ -20,11 +20,40 @@
       flex-wrap: wrap;
       gap: 12px;
     }
+    .topbar-left {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
     .topbar-brand {
       font-weight: 700;
       color: #0369a1;
       text-decoration: none;
       font-size: 16px;
+    }
+    .topbar-nav {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      flex-wrap: wrap;
+    }
+    .nav-link {
+      text-decoration: none;
+      color: #334155;
+      font-size: 14px;
+      font-weight: 600;
+      padding: 6px 12px;
+      border-radius: 6px;
+      transition: background-color 0.2s ease, color 0.2s ease;
+    }
+    .nav-link:hover {
+      background-color: #e0f2fe;
+      color: #0369a1;
+    }
+    .nav-link.active {
+      background-color: #0284c7;
+      color: #ffffff;
     }
     .topbar-user {
       display: flex;
@@ -91,12 +120,22 @@
     .field-error { color: #dc2626; font-size: 13px; margin: -6px 0 10px; display: block; }
     form.inline { display: inline; }
   </style>
+  @stack('styles')
 </head>
 <body>
   <div class="page-container">
 
     <div class="topbar">
-      <a href="{{ route('penerbit.index') }}" class="topbar-brand">Perpustakaan Digital — Modul Penerbit &amp; Supplier</a>
+      <div class="topbar-left">
+        <a href="{{ route('penerbit.index') }}" class="topbar-brand">Perpustakaan Digital</a>
+        @auth
+          <nav class="topbar-nav">
+            <a href="{{ route('penerbit.index') }}" class="nav-link {{ request()->routeIs('penerbit.*') ? 'active' : '' }}">Penerbit</a>
+            <a href="{{ route('fasilitas.index') }}" class="nav-link {{ request()->routeIs('fasilitas.*') ? 'active' : '' }}">Fasilitas</a>
+            <a href="{{ route('area.index') }}" class="nav-link {{ request()->routeIs('area.*') ? 'active' : '' }}">Area &amp; Meja</a>
+          </nav>
+        @endauth
+      </div>
       <div class="topbar-user">
         @auth
           <span>Halo, <strong>{{ auth()->user()->name }}</strong></span>
