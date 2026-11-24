@@ -20,7 +20,7 @@ class DatabaseSeeder extends Seeder
             ['email' => 'admin@perpustakaan.com'],
             [
                 'name' => 'Admin Perpustakaan',
-                'password' => Hash::make('102022500050'),
+                'password' => Hash::make('WADKELOMPOK1'),
                 'role' => 'admin',
                 'email_verified_at' => now(),
             ]
@@ -30,7 +30,7 @@ class DatabaseSeeder extends Seeder
             ['email' => 'user@perpustakaan.com'],
             [
                 'name' => 'User Anggota',
-                'password' => Hash::make('102022500050'),
+                'password' => Hash::make('WADKELOMPOK1'),
                 'role' => 'user',
                 'email_verified_at' => now(),
             ]

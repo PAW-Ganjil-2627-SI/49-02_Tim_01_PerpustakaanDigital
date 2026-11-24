@@ -38,7 +38,7 @@
 
   <div class="alert-info auth-info">
     <strong>Akun Pengujian (Seeder):</strong><br>
-    Admin: <code>admin@perpustakaan.com</code> / Password: <code>102022500050</code><br>
-    User: <code>user@perpustakaan.com</code> / Password: <code>102022500050</code>
+    Admin: <code>admin@perpustakaan.com</code> / Password: <code>WADKELOMPOK1</code><br>
+    User: <code>user@perpustakaan.com</code> / Password: <code>WADKELOMPOK1</code>
   </div>
 @endsection

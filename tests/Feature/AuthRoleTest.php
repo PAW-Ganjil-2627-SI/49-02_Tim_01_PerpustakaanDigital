@@ -45,13 +45,13 @@ class AuthRoleTest extends TestCase
     {
         $user = User::factory()->create([
             'email' => 'user@perpustakaan.com',
-            'password' => '102022500050',
+            'password' => 'WADKELOMPOK1',
             'role' => 'user',
         ]);
 
         $loginResponse = $this->post('/login', [
             'email' => 'user@perpustakaan.com',
-            'password' => '102022500050',
+            'password' => 'WADKELOMPOK1',
         ]);
 
         $loginResponse->assertRedirect('/penerbit');
